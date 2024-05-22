@@ -1,0 +1,50 @@
+
+
+
+
+
+
+
+
+.navbar-brand{
+
+    font-size: 2rem;
+}
+.footer{
+text-align: center;
+    background-color: rgb(157, 169, 169);
+}
+.card{
+
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    width: 100% !important;
+object-fit: cover !important;
+
+}
+.card-body{
+
+    padding: 0 !important;
+}
+.alllist{
+text-decoration: none;
+}
+ #map {
+     margin: 0 30%;
+     height: 300px;
+     /* Set the height of the map */
+     width: 40%;
+ }
+ @media (max-width: 600px) {
+     textarea {
+         width: 100%;
+         height: 100px;
+         /* Smaller height */
+         padding: 8px;
+         /* Smaller padding */
+         font-size: 14px;
+         /* Smaller font size */
+         rows:3;
+     }
+ }

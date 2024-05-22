@@ -1,0 +1,48 @@
+
+<style>
+
+  .sbox{
+display: flex;
+margin-left: 17rem;justify-content: space-around;
+  }.btnn{
+
+margin:2px 3px;
+
+  }
+</style>
+
+
+<nav class="navbar navbar-expand-md border-bottom sticky-top bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listing"><i class="fa-regular fa-compass"></i></a>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="/listing"> <b>Explore</b></a>
+      </div>
+      <div class="form sbox">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search your destination" aria-label="Search">
+    <button class="btn btn-outline-success btnn" type="submit">Search</button>
+      </div>
+    </div>
+    
+
+      <div class="navbar-nav">     
+           <a class="nav-link" href="/listing/create"><b> Airbnb your home</b> </a>
+
+<%if(!currentUser){%>
+
+  
+
+        <a class="nav-link"  href="/signup"><b>signup</b></a>
+        <a class="nav-link" href="/login"><b>login</b></a>
+<%}%>
+
+<%if(currentUser){%>
+          <a class="nav-link" href="/logout">logout </a>
+
+<% } %>        
+      </div>
+    </div>
+  </div>
+</nav>

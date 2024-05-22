@@ -1,0 +1,53 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+
+<style>
+
+    body {
+        font-family: Arial, sans-serif; 
+        background-color: #f3f3f3;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+     h2 {background-color: #f3f3f3ab;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #ff6200;
+        
+    }
+    
+    .form-label {
+        font-weight: bold;
+        color: #555;
+    }
+</style>
+<div class="container col-6 ">
+    <h2>Signup Here</h2>
+    <form action="/signup" method="post"class='needs-validation' novalidate>
+        <div class="mb-3">
+            <label for="title" class="form-label">username:</label>
+            <input type="text" id="title" name="username" class="form-control"  required>
+           
+
+        </div>
+         <div class="mb-3">
+            <label for="title" class="form-label">email:</label>
+            <input type="text" id="title" name="email" class="form-control"  required>
+           
+
+        </div>
+         <div class="mb-3">
+            <label for="title" class="form-label">password:</label>
+            <input type="text" id="title" name="password" class="form-control"  required>
+           
+
+        </div>
+        <button>submit</button>
+        </form>
+</div>

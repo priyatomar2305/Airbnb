@@ -1,0 +1,83 @@
+<% layout('/layouts/boilerplate.ejs') -%>
+
+<style>
+    body {
+        font-family: Arial, sans-serif; 
+        background-color: #f3f3f3;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+    
+    .form-label {
+        font-weight: bold;
+        color: #555;
+    }
+    
+    textarea.form-control {
+        resize: none;
+    }
+    
+    button[type="submit"] {
+        width: 100%;
+        background: #FF6F61;
+        border: none;
+    }
+
+    button[type="submit"]:hover {
+        background: #FF5744;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Update Travel Details</h2>
+    <form action="/listing/<%= data.id%>/update?_method=PATCH" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title:</label>
+            <input type="text" id="title" name="listing[title]" class="form-control" value="<%=data.title  %>"required>
+            <div class="invalid-feedback">please enter te title</div>
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-label">Country:</label>
+            <input type="text" id="country" name="listing[country]" class="form-control" value="<%=data.country  %>"  placeholder="Country" required>
+        </div>
+<div>
+<img src="<%= originalURl %>" alt="" style="width: 4rem ;border-radius: 2rem; ">
+
+</div>
+
+ <div class="mb-3">
+
+   <label for="description" class="form-label">image:</label>
+<input type="file" name="listing[image]" style="width: 100%;" class="form-control"  value="<%= data.image['url']  %>"  placeholder="paste your img url">
+        </div>
+
+        <div class="mb-3">
+            <label for="location" class="form-label">Location:</label>
+            <input type="text" id="location" name="listing[location]" class="form-control" value="<%=data.location  %>" placeholder="Location" required>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price:</label>
+            <input type="number" id="price" name="listing[price]" class="form-control" value="<%=data.price  %>" placeholder="Price" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description:</label>
+ <textarea id="description" name="listing[description]" class="form-control" rows="5" placeholder="Your description" required><%=data.description %></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</body> 
